@@ -6,6 +6,8 @@ import com.example.bootFight.service.ScopeConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @Author: wgl
@@ -14,11 +16,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 @SpringBootApplication
 public class SpringFightApplication {
-    /*public static void main(String[] args) {
-        SpringApplication.run(SpringFightApplication.class,args);
-
-    }*/
     public static void main(String[] args) {
+        SpringApplication.run(SpringFightApplication.class,args);
+    }
+   /* public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ScopeConfig.class);
         //单例
         DemoSingletonService s1 = context.getBean(DemoSingletonService.class);
@@ -31,5 +32,5 @@ public class SpringFightApplication {
         System.out.println("p1与p2是否相等: "+p1.equals(p2));
 
         context.close();
-    }
+    }*/
 }
