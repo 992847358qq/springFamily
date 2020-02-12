@@ -117,7 +117,7 @@ public class sevenZip {
         try {
             //apache7Z("G:\\orgFile","G:\\7zFile\\seven.7z");
             System.out.println( new Date());
-            Compress7z("G:\\orgFile", "G:\\7zFile\\newTestbyYTT.7z");
+            Compress7z("G:\\orgFile\\smartclass", "G:\\7zFile\\newTestbyYTT.7z");
             System.out.println(new Date());
         } catch (Exception e) {
             e.printStackTrace();
