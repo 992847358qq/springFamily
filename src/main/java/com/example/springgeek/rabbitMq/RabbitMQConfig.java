@@ -121,7 +121,7 @@ public class RabbitMQConfig {
     @Bean
     public SimpleMessageListenerContainer messageContainer() {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory());
-        container.setQueues(queueB());
+        container.setQueues(queueA());
         container.setExposeListenerChannel(true);
         container.setMaxConcurrentConsumers(1);
         container.setConcurrentConsumers(1);
@@ -131,7 +131,7 @@ public class RabbitMQConfig {
             @Override
             public void onMessage(Message message, Channel channel) throws Exception {
                 byte[] body = message.getBody();
-                System.out.println("队列B接受消息 " + new String(body));
+                System.out.println("队列A接受消息 " + new String(body));
                 channel.basicAck(message.getMessageProperties().getDeliveryTag(), false); //确认消息成功消费
             }
         });
