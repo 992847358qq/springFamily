@@ -7,7 +7,7 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.util.Date;
 
 /**
  * @Author: wgl
@@ -74,10 +74,7 @@ public class sevenZip {
         out.close();
     }
 
-    /**
-     * @param name 压缩文件名，可以写为null保持默认
-    */
-    //递归压缩
+
     public static void compress(SevenZOutputFile out, File input, String name) throws IOException {
         if (name == null) {
             name = input.getName();
@@ -119,7 +116,9 @@ public class sevenZip {
     public static void main (String[]args){
         try {
             //apache7Z("G:\\orgFile","G:\\7zFile\\seven.7z");
-            Compress7z("G:\\orgFile", "G:\\7zFile\\newTestbyYTT.7z");
+            System.out.println( new Date());
+            Compress7z("G:\\orgFile\\smartclass", "G:\\7zFile\\newTestbyYTT.7z");
+            System.out.println(new Date());
         } catch (Exception e) {
             e.printStackTrace();
         }

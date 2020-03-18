@@ -34,6 +34,8 @@ public class Main {
             taskService.executeAsyncTask(i);
             //taskService.executeAsyncTaskPlus(i);
         }
+        System.out.println("11111111111111111111111111");
         applicationContext.close();
+        return;
     }
 }
