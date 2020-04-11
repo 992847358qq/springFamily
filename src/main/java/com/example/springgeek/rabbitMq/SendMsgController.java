@@ -17,7 +17,7 @@ public class SendMsgController {
     @Autowired
     private MsgProducer producer;
 
-    @PostMapping("/test")
+    @RequestMapping("/test")
     public void sendMsg() {
         String content = "test";
         for (int i = 0; i < 10; i++) {

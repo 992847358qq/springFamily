@@ -118,13 +118,13 @@ public class RabbitMQConfig {
      * @Param: []
      * @Return: org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer
      */
-    @Bean
+    /*@Bean
     public SimpleMessageListenerContainer messageContainer() {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory());
         container.setQueues(queueA());
         container.setExposeListenerChannel(true);
-        container.setMaxConcurrentConsumers(1);
-        container.setConcurrentConsumers(1);
+        container.setMaxConcurrentConsumers(5);
+        container.setConcurrentConsumers(3);
         container.setAcknowledgeMode(AcknowledgeMode.MANUAL); //设置确认模式手工确认
         container.setMessageListener(new ChannelAwareMessageListener() {
 
@@ -136,5 +136,5 @@ public class RabbitMQConfig {
             }
         });
         return container;
-    }
+    }*/
 }
