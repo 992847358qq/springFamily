@@ -1,6 +1,5 @@
 package com.example.springgeek.volatile1;
 
-import com.example.springgeek.redis.po.User;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,18 +10,18 @@ import java.util.concurrent.TimeUnit;
  * @date 2020/3/5 22:23
  **/
 public class TestV {
-        //volatile Integer index = 1;
+/*        //volatile Integer index = 1;
            boolean bool = true;
            volatile User user = new User();
     public static void main(String[] args) {
         TestV testV = new TestV();
         testV.user.setAge(10);
-        /*new Thread(testV.m(testV.index),"t1").start();
+        *//*new Thread(testV.m(testV.index),"t1").start();
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }*//*
         System.out.println(testV.user.getAge());
        new Thread(()->{
            System.out.println(Thread.currentThread().getName());
@@ -49,5 +48,5 @@ public class TestV {
         while (user.getAge()>6){
         }
         System.out.println("结束线程 n");
-    }
+    }*/
 }
