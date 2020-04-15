@@ -10,10 +10,10 @@ import org.springframework.data.redis.core.RedisTemplate;
  * @date 2020/3/2 23:10
  **/
 public class Test {
-    @Autowired
+    /*@Autowired
     private RedisTemplate<String,Object> redisTemplate;
 
     public static void main(String[] args) {
         String key = "111";
-    }
+    }*/
 }

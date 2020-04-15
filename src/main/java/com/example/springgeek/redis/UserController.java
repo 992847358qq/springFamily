@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @Autowired
+    /*@Autowired
     private UserServiceImpl userService;
 
     @RequestMapping(value = "/test",method = RequestMethod.GET)
@@ -29,5 +29,5 @@ public class UserController {
     public User userGet(){
         User wangyi = userService.getObject("wangyi");
         return wangyi;
-    }
+    }*/
 }

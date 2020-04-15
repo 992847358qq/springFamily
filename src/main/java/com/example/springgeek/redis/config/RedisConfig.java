@@ -30,7 +30,7 @@ public class RedisConfig {
         RedisCacheManager cacheManager = new RedisCacheManager(redisCacheWriter,configuration);
         return cacheManager;
     }*/
-    @Bean
+    /*@Bean
     public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory factory){
         RedisTemplate<String,Object> template = new RedisTemplate<>();
         template.setConnectionFactory(factory);
@@ -50,5 +50,5 @@ public class RedisConfig {
         template.setHashValueSerializer(jackson2JsonRedisSerializer);
         template.afterPropertiesSet();
         return template;
-    }
+    }*/
 }
