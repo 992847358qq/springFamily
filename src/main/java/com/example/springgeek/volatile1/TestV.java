@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2020/3/5 22:23
  **/
 public class TestV {
- /*       //volatile Integer index = 1;
+/*        //volatile Integer index = 1;
            boolean bool = true;
            volatile User user = new User();
     public static void main(String[] args) {
