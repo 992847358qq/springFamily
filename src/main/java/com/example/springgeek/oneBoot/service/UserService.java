@@ -17,4 +17,6 @@ public interface UserService {
     User getUserByName(String name);
 
     User getUser();
+
+    User getUserEvent();
 }
