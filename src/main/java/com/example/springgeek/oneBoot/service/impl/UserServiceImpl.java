@@ -1,0 +1,41 @@
+package com.example.springgeek.oneBoot.service.impl;
+
+import com.example.springgeek.oneBoot.Bean.User;
+import com.example.springgeek.oneBoot.dao.UserMapper;
+import com.example.springgeek.oneBoot.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+/**
+ * @Author: wgl
+ * @Date: 2020/04/20 15:44
+ * @Description:
+ */
+@Service
+public class UserServiceImpl implements UserService {
+    @Resource
+    private UserMapper userMapper;
+    @Override
+    public User getUser(Long id) {
+        return userMapper.getUser(id);
+    }
+
+    @Override
+    public List<User> getAll() {
+        return userMapper.getAll();
+    }
+
+    @Override
+    public User getUserByName(String name) {
+        return userMapper.getUserByName(name);
+    }
+
+    @Override
+    public User getUser() {
+        return new User(1,"王先生","123456");
+    }
+}
