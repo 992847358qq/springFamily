@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @Author: wgl
@@ -35,7 +36,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserByName(String name) {
-        return userMapper.getUserByName(name);
+        return userMapper.getByUsername(name);
     }
 
     @Override
@@ -50,5 +51,15 @@ public class UserServiceImpl implements UserService {
         MyEvent event = new MyEvent(this, user);
         applicationContext.publishEvent(event);
         return user;
+    }
+
+    @Override
+    public Set<String> getRoles(String username) {
+        return userMapper.getRoles(username);
+    }
+
+    @Override
+    public Set<String> getPermissions(String username) {
+        return userMapper.getPermissions(username);
     }
 }
