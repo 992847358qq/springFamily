@@ -26,7 +26,7 @@ public class MyInterceptor implements HandlerInterceptor {
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         Method method = handlerMethod.getMethod();
         String methodName = method.getName();
-        logger.info("====拦截到了方法：{}，在该方法执行之前执行====", methodName);
+        //logger.info("====拦截到了方法：{}，在该方法执行之前执行====", methodName);
 
         // 通过方法，可以获取该方法上的自定义注解，然后通过注解来判断该方法是否要被拦截
         // @UnInterception 是我们自定义的注解
@@ -39,7 +39,7 @@ public class MyInterceptor implements HandlerInterceptor {
         // 判断用户有没有登陆，一般登陆之后的用户都有一个对应的token
         String token = request.getParameter("token");
         if (null == token || "".equals(token)) {
-            logger.info("用户未登录，没有权限执行……请登录");
+           // logger.info("用户未登录，没有权限执行……请登录");
             Map<String,Object> result = Maps.newHashMap();
             result.put("message","token is not exists or token is unauthorized!");
             response.setContentType("application/json;charset=utf-8");
@@ -53,11 +53,11 @@ public class MyInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        logger.info("执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染");
+        //logger.info("执行完方法之后进执行(Controller方法调用之后)，但是此时还没进行视图渲染");
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        logger.info("整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了");
+        //logger.info("整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了");
     }
 }
