@@ -3,6 +3,7 @@ package com.example.springgeek.oneBoot.service;
 import com.example.springgeek.oneBoot.Bean.User;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @Author: wgl
@@ -19,4 +20,7 @@ public interface UserService {
     User getUser();
 
     User getUserEvent();
+
+    Set<String> getRoles(String username);
+    Set<String> getPermissions(String username);
 }
