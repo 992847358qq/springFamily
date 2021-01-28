@@ -1,6 +1,5 @@
 package com.example.springgeek.config;
 
-import com.example.springgeek.interceptor.MyInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -27,9 +26,9 @@ public class MyInterceptorConfig  extends WebMvcConfigurationSupport {
 
 @Configuration
 public class MyInterceptorConfig implements WebMvcConfigurer {
-    @Override
+    /*@Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 实现WebMvcConfigurer不会导致静态资源被拦截
         registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**");
-    }
+    }*/
 }

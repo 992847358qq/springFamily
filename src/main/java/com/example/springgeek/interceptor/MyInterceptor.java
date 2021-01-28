@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * 自定义拦截器
  */
-public class MyInterceptor implements HandlerInterceptor {
+/*public class MyInterceptor implements HandlerInterceptor {
     private static  final Logger logger = LoggerFactory.getLogger(MyInterceptor.class);
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -60,4 +60,4 @@ public class MyInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         //logger.info("整个请求都处理完咯，DispatcherServlet也渲染了对应的视图咯，此时我可以做一些清理的工作了");
     }
-}
+}*/
